@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonardo Barraza · Desarrollador Full Stack</title>
+<meta name="description" content="Portafolio de Leonardo Barraza Cantillo, desarrollador full stack en Barranquilla, Colombia. Python, Flask, React, SQL y Google Cloud. Disponible para trabajo remoto.">
+<meta name="theme-color" content="#0a0e14">
+<link rel="canonical" href="https://leobarraza0.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://leobarraza0.github.io/">
+<meta property="og:title" content="Leonardo Barraza · Desarrollador Full Stack">
+<meta property="og:description" content="Python, Flask, React, SQL y Google Cloud. Proyectos, práctica actual y contacto.">
+<meta property="og:image" content="https://leobarraza0.github.io/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a0e14'/%3E%3Cpath d='M8 10l6 6-6 6' stroke='%232ee6c5' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16 23h8' stroke='%232ee6c5' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script>
+  // Idioma antes de pintar: ?lang= > elección guardada > idioma del navegador
+  (function () {
+    var r = document.documentElement, q = new URLSearchParams(location.search).get('lang'), s = null;
+    try { s = localStorage.getItem('lang'); } catch (e) {}
+    var l = q || s || (/^es/i.test(navigator.language) ? 'es' : 'en');
+    if (l !== 'en') l = 'es';
+    r.lang = l; r.dataset.lang = l; r.classList.add('js');
+  })();
+</script>
+<script src="main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main"><span lang="es">Saltar al contenido</span><span lang="en">Skip to content</span></a>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="Inicio"><span class="ps">~/</span>leonardo<span class="caret" aria-hidden="true"></span></a>
+    <nav aria-label="Secciones">
+      <a href="#ahora"><span lang="es">ahora</span><span lang="en">now</span></a>
+      <a href="#trayectoria"><span lang="es">trayectoria</span><span lang="en">log</span></a>
+      <a href="#proyectos"><span lang="es">proyectos</span><span lang="en">projects</span></a>
+      <a href="#stack">stack</a>
+      <a href="#contacto"><span lang="es">contacto</span><span lang="en">contact</span></a>
+    </nav>
+    <button class="lang-toggle" type="button" aria-label="Cambiar idioma / Switch language">
+      <span data-l="es">ES</span><span aria-hidden="true">/</span><span data-l="en">EN</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero wrap" id="top">
+  <div class="hero-text">
+    <p class="status"><span class="pulse" aria-hidden="true"></span>
+      <span lang="es">Disponible para trabajo remoto</span><span lang="en">Open to remote roles</span>
+    </p>
+    <div class="who">
+      <picture>
+        <source srcset="assets/foto.webp" type="image/webp">
+        <img src="assets/foto.jpg" alt="Foto de Leonardo Barraza" width="112" height="112">
+      </picture>
+      <div>
+        <h1>Leonardo Barraza Cantillo</h1>
+        <p class="role"><span lang="es">Desarrollador Full Stack · Ingeniería de Sistemas</span><span lang="en">Full Stack Developer · Systems Engineering</span></p>
+      </div>
+    </div>
+    <p class="lead" lang="es">Desarrollo software para la Secretaría de Educación del Atlántico, donde automatizo procesos y diseño su sistema de inventario tecnológico. Trabajo sobre todo con Python, Flask, React y SQL, desde el levantamiento de requerimientos hasta el despliegue.</p>
+    <p class="lead" lang="en">I build software for the Atlántico Secretariat of Education, where I automate processes and design its IT-inventory system. I work mostly with Python, Flask, React and SQL, from requirements gathering to deployment.</p>
+    <ul class="meta">
+      <li>Barranquilla, Colombia · UTC-5</li>
+      <li><span lang="es">Español nativo · Inglés B2</span><span lang="en">Spanish (native) · English B2</span></li>
+    </ul>
+    <div class="cta">
+      <a class="btn primary" href="#proyectos"><span lang="es">Ver proyectos</span><span lang="en">See projects</span></a>
+      <a class="btn" href="cv/Leonardo-Barraza-HV.pdf" download lang="es">Descargar HV</a>
+      <a class="btn" href="cv/Leonardo-Barraza-Resume.pdf" download lang="en">Download resume</a>
+      <a class="btn ghost" href="#contacto"><span lang="es">Contacto</span><span lang="en">Contact</span></a>
+    </div>
+  </div>
+
+  <div class="term" id="term">
+    <div class="term-bar">
+      <span class="lights" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="term-title">leo@barranquilla: ~</span>
+    </div>
+    <div class="term-body" id="term-body">
+      <div id="term-out" aria-live="polite">
+        <div class="ln"><span class="ps">leo@barranquilla:~$</span> whoami</div>
+        <div>Leonardo Barraza Cantillo</div>
+        <div class="dim" lang="es">Desarrollador Full Stack · Ingeniería de Sistemas</div>
+        <div class="dim" lang="en">Full Stack Developer · Systems Engineering</div>
+      </div>
+      <form id="term-form" autocomplete="off">
+        <label for="term-in" class="ps">leo@barranquilla:~$</label>
+        <input id="term-in" type="text" spellcheck="false" autocapitalize="off" enterkeyhint="go" aria-label="Escribe un comando (help) / Type a command (help)">
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- AHORA -->
+<section class="section wrap reveal" id="ahora">
+  <header class="sec-head">
+    <p class="cmd"><span class="ps">$</span> git status</p>
+    <h2><span lang="es">En qué estoy ahora</span><span lang="en">What I'm working on</span></h2>
+  </header>
+
+  <div class="job">
+    <p class="branch"><span lang="es">En la rama</span><span lang="en">On branch</span> <b>practica-sed</b></p>
+    <h3><span lang="es">Practicante de Ingeniería de Sistemas</span><span lang="en">Systems Engineering Intern</span></h3>
+    <p class="org"><span lang="es">Gobernación del Atlántico · Secretaría de Educación · Ago 2026 – Actualidad</span><span lang="en">Atlántico Department Government · Secretariat of Education · Aug 2026 – Present</span></p>
+  </div>
+
+  <div class="work-grid">
+    <article class="work">
+      <header>
+        <h4><span lang="es">Conversor PDF → TIF con OCR</span><span lang="en">PDF → TIF converter with OCR</span></h4>
+        <span class="state ok"><span lang="es">en producción</span><span lang="en">in production</span></span>
+      </header>
+      <p lang="es">Reemplazó un proceso manual. Recibe lotes de PDF escaneados, los convierte a TIF, lee cada página con OCR y archiva cada documento en la carpeta de la persona según el número de cédula que encuentra. Cada lote termina con un reporte CSV para auditoría.</p>
+      <p lang="en">It replaced a manual process. It takes batches of scanned PDFs, converts them to TIF, runs OCR on every page and files each document under the ID number it finds. Every batch ends with a CSV audit report.</p>
+      <ol class="pipe" aria-label="Pipeline">
+        <li>PDF</li>
+        <li><span lang="es">300 DPI, página a página</span><span lang="en">300 DPI, page by page</span></li>
+        <li>TIFF LZW</li>
+        <li><span lang="es">OCR · 4 hilos</span><span lang="en">OCR · 4 threads</span></li>
+        <li><span lang="es">cédula → carpeta</span><span lang="en">ID → folder</span></li>
+        <li>reporte.csv</li>
+      </ol>
+      <ul class="facts">
+        <li><b>−75 %</b> <span lang="es">de peso por página, sin pérdida</span><span lang="en">file size per page, lossless</span></li>
+        <li><b>RAM</b> <span lang="es">constante sin importar el tamaño del PDF</span><span lang="en">stays flat regardless of PDF size</span></li>
+      </ul>
+      <ul class="chips"><li>Python</li><li>Tesseract OCR</li><li>Poppler</li><li>Pillow</li><li>tkinter</li></ul>
+    </article>
+
+    <article class="work">
+      <header>
+        <h4><span lang="es">Sistema de inventario tecnológico</span><span lang="en">IT-inventory system</span></h4>
+        <span class="state wip"><span lang="es">en construcción</span><span lang="en">in development</span></span>
+      </header>
+      <p lang="es">La Secretaría levanta el inventario de sus colegios por tres canales con formatos que no se pueden cruzar. Diseño una base única de la que salen todos los reportes y la aplicación web con la que cada sede registra lo que tiene. Los colegios no tienen cuenta institucional de Google, así que cada sede entra con su propio enlace con token, sin usuario ni contraseña.</p>
+      <p lang="en">The Secretariat collects its schools' IT inventory through three channels whose formats can't be reconciled. I'm designing a single database that every report comes from, and the web app each school site uses to register its equipment. Schools have no institutional Google accounts, so each site signs in through its own token link, with no username or password.</p>
+      <dl class="stats">
+        <div><dt>20</dt><dd><span lang="es">municipios</span><span lang="en">municipalities</span></dd></div>
+        <div><dt>86</dt><dd><span lang="es">colegios</span><span lang="en">schools</span></dd></div>
+        <div><dt>207</dt><dd><span lang="es">sedes</span><span lang="en">sites</span></dd></div>
+        <div><dt>40+</dt><dd><span lang="es">pruebas automáticas</span><span lang="en">automated tests</span></dd></div>
+      </dl>
+      <ol class="ci">
+        <li class="done"><span lang="es">Requerimientos y diagnóstico de más de 2.000 registros históricos</span><span lang="en">Requirements and review of 2,000+ historical records</span></li>
+        <li class="done"><span lang="es">Modelo de datos y carga verificada desde fuentes oficiales</span><span lang="en">Data model and verified loading from official sources</span></li>
+        <li class="doing"><span lang="es">Aplicación web: autoguardado y control de concurrencia</span><span lang="en">Web app: autosave and concurrency control</span></li>
+        <li><span lang="es">Piloto con colegios</span><span lang="en">Pilot with schools</span></li>
+        <li><span lang="es">Despliegue en el departamento</span><span lang="en">Department-wide rollout</span></li>
+      </ol>
+      <ul class="chips"><li>Google Apps Script</li><li>JavaScript</li><li>Google Sheets</li><li>Python</li></ul>
+    </article>
+  </div>
+
+  <div class="aside-grid">
+    <p class="note"><span class="ps">+</span>
+      <span lang="es">También doy soporte técnico a funcionarios y documenté el diseño técnico y la política de datos.</span>
+      <span lang="en">I also provide technical support to staff, and I documented the technical design and the data policy.</span>
+    </p>
+    <p class="note"><span class="ps">+</span>
+      <span lang="es">En paralelo: último semestre de Ingeniería de Sistemas (Universidad Libre) y tecnólogo en Análisis y Desarrollo de Software (SENA).</span>
+      <span lang="en">In parallel: final year of Systems Engineering (Universidad Libre) and a Software Analysis &amp; Development technology degree (SENA).</span>
+    </p>
+    <p class="note live" id="live-push" hidden></p>
+  </div>
+</section>
+
+<!-- TRAYECTORIA -->
+<section class="section wrap reveal" id="trayectoria">
+  <header class="sec-head">
+    <p class="cmd"><span class="ps">$</span> git log --graph --oneline</p>
+    <h2><span lang="es">Trayectoria</span><span lang="en">Track record</span></h2>
+  </header>
+  <div class="legend" aria-hidden="true">
+    <span class="l0">main · Universidad Libre</span>
+    <span class="l1">practica-sed</span>
+    <span class="l2">sena</span>
+  </div>
+  <div class="graph-wrap">
+  <svg aria-hidden="true"></svg>
+  <ol class="graph" id="graph">
+    <li data-lane="0"><code>e41b9c2</code><span class="refs"><span class="ref br">main</span></span>
+      <span class="msg"><span lang="es">HealthByte: tablero quirúrgico por voz, hackathon, desplegado en Cloud Run</span><span lang="en">HealthByte: voice-driven surgical board, hackathon, deployed on Cloud Run</span></span><time>2026-10</time></li>
+    <li data-lane="1" class="head"><code>9d07a3f</code><span class="refs"><span class="ref hd">HEAD → practica-sed</span></span>
+      <span class="msg"><span lang="es">Inventario: 207 sedes cargadas y acceso por token funcionando</span><span lang="en">Inventory: 207 sites loaded and token access working</span></span><time>2026-09</time></li>
+    <li data-lane="1"><code>c3a51e8</code>
+      <span class="msg"><span lang="es">Conversor PDF → TIF con OCR en producción</span><span lang="en">PDF → TIF OCR converter in production</span></span><time>2026-08</time></li>
+    <li data-lane="1" data-fork="0"><code>5f6e2b1</code>
+      <span class="msg"><span lang="es">Inicio de la práctica en la Secretaría de Educación del Atlántico</span><span lang="en">Internship starts at the Atlántico Secretariat of Education</span></span><time>2026-08</time></li>
+    <li data-lane="0" class="tag"><code>b72d4c0</code><span class="refs"><span class="ref tg">tag: redcolsi-2026</span></span>
+      <span class="msg"><span lang="es">Ponente en el XXIII encuentro RedColsi</span><span lang="en">Speaker at the 23rd RedColsi meeting</span></span><time>2026-05</time></li>
+    <li data-lane="0"><code>1a8f3d6</code>
+      <span class="msg"><span lang="es">Book-L: app móvil de microaprendizaje en Flutter</span><span lang="en">Book-L: micro-learning mobile app in Flutter</span></span><time>2026-04</time></li>
+    <li data-lane="0"><code>7e29b05</code>
+      <span class="msg"><span lang="es">Rennor: predicción de humedad con redes neuronales recurrentes</span><span lang="en">Rennor: humidity forecasting with recurrent neural networks</span></span><time>2025-11</time></li>
+    <li data-lane="0"><code>f0c4a19</code>
+      <span class="msg"><span lang="es">AgroCosta, desplegada en Firebase Hosting</span><span lang="en">AgroCosta, deployed on Firebase Hosting</span></span><time>2025-10</time></li>
+    <li data-lane="0" class="tag"><code>3b9e7d2</code><span class="refs"><span class="ref tg">tag: ieee-c3-2025</span></span>
+      <span class="msg"><span lang="es">Artículo publicado en IEEE C3 2025, como ponente</span><span lang="en">Paper published at IEEE C3 2025, as speaker</span></span><time>2025-09</time></li>
+    <li data-lane="0"><code>d5a06c8</code>
+      <span class="msg"><span lang="es">Greenity: app de reciclaje, desarrollador principal</span><span lang="en">Greenity: recycling app, lead developer</span></span><time>2025-09</time></li>
+    <li data-lane="0"><code>8c1f2e4</code>
+      <span class="msg"><span lang="es">RusticOrder: pedidos y autenticación web con Java Servlets</span><span lang="en">RusticOrder: orders and web auth with Java Servlets</span></span><time>2025-08</time></li>
+    <li data-lane="0"><code>62e8b3a</code>
+      <span class="msg">Hackathon Unilibre 2025</span><time>2025-06</time></li>
+    <li data-lane="0"><code>a4d71f9</code>
+      <span class="msg"><span lang="es">GraphMind: grafos con algoritmos e IA</span><span lang="en">GraphMind: graphs with algorithms and AI</span></span><time>2025-05</time></li>
+    <li data-lane="0" class="tag"><code>0b5c9e7</code><span class="refs"><span class="ref tg">tag: redcolsi-2025</span></span>
+      <span class="msg"><span lang="es">Hackathon Barranqu-IA (GDG) y ponente en RedColsi</span><span lang="en">Barranqu-IA hackathon (GDG) and RedColsi speaker</span></span><time>2025-05</time></li>
+    <li data-lane="2" data-fork="0" class="open"><code>e9f3a28</code><span class="refs"><span class="ref br2">sena</span></span>
+      <span class="msg"><span lang="es">Tecnólogo en Análisis y Desarrollo de Software (SENA), en curso</span><span lang="en">Software Analysis &amp; Development technology degree (SENA), ongoing</span></span><time>2024</time></li>
+    <li data-lane="0"><code>4c2d8a1</code>
+      <span class="msg"><span lang="es">Inicio de Ingeniería de Sistemas en la Universidad Libre</span><span lang="en">Starts Systems Engineering at Universidad Libre</span></span><time>2023</time></li>
+  </ol>
+  </div>
+</section>
+
+<!-- PROYECTOS -->
+<section class="section wrap reveal" id="proyectos">
+  <header class="sec-head">
+    <p class="cmd"><span class="ps">$</span> <span lang="es">ls proyectos/</span><span lang="en">ls projects/</span></p>
+    <h2><span lang="es">Proyectos</span><span lang="en">Projects</span></h2>
+  </header>
+
+  <div class="cards">
+    <article class="card">
+<pre class="preview" aria-hidden="true"><span class="c">› </span><span class="s">"cámara, cuenta la mesa"</span><span lang="en" class="d">  # "camera, count the table"</span>
+<span class="c">› </span>foto → Gemini · Vertex AI
+<span class="c">› </span><span lang="es">conteo listo · ¿registrar?</span><span lang="en">count ready · record it?</span> <span class="g">[<span lang="es">sí</span><span lang="en">yes</span>]</span></pre>
+      <div class="card-body">
+        <header><h3>HealthByte</h3><span class="badge"><span lang="es">Hackathon 2026 · equipo de 5</span><span lang="en">Hackathon 2026 · team of 5</span></span></header>
+        <p lang="es">Tablero de seguridad quirúrgica que se llena por voz, desplegado en Google Cloud Run. Mi parte: el conteo de instrumental con visión artificial (Gemini en Vertex AI) y el análisis de requerimientos.</p>
+        <p lang="en">Voice-driven surgical safety board deployed on Google Cloud Run. My part: computer-vision instrument counting (Gemini on Vertex AI) and requirements analysis.</p>
+        <ul class="chips"><li>TypeScript</li><li>React</li><li>Node.js</li><li>PostgreSQL</li><li>Vertex AI</li><li>Cloud Run</li></ul>
+        <p class="links"><a href="https://github.com/LeoBarraza0/HealthByte" target="_blank" rel="noopener"><span lang="es">Código</span><span lang="en">Code</span> ↗</a></p>
+      </div>
+    </article>
+
+    <article class="card">
+<pre class="preview" aria-hidden="true"><span class="d">lib/features/            # 17</span>
+├── curso/
+│   ├── <span class="k">domain/</span>
+│   ├── <span class="k">application/</span>
+│   └── <span class="k">infrastructure/</span>
+└── ejercicio/ leccion/ foro/ …</pre>
+      <div class="card-body">
+        <header><h3>Book-L</h3><span class="badge"><span lang="es">Móvil · equipo de 2</span><span lang="en">Mobile · team of 2</span></span></header>
+        <p lang="es">App de microaprendizaje para Android, iOS y web: cursos, lecciones con video y PDF, ejercicios con calificación automática, foros y rachas. Arquitectura hexagonal con 17 módulos por funcionalidad.</p>
+        <p lang="en">Micro-learning app for Android, iOS and web: courses, lessons with video and PDF, auto-graded exercises, forums and streaks. Hexagonal architecture with 17 feature modules.</p>
+        <ul class="chips"><li>Flutter</li><li>Dart</li><li>Supabase</li><li>Provider</li></ul>
+        <p class="links"><a href="https://github.com/LeoBarraza0/Book-L" target="_blank" rel="noopener"><span lang="es">Código</span><span lang="en">Code</span> ↗</a></p>
+      </div>
+    </article>
+
+    <article class="card">
+<pre class="preview" aria-hidden="true">┌───────────────────────────┐
+│  <span class="g">●</span>      ·     <span class="g">●</span>     ·     │
+│     ·    <span class="c">○</span> <span lang="es">tú</span><span lang="en">you</span><span lang="es"> </span>   ·   <span class="g">●</span>    │
+│  <span class="g">●</span>    ·        ·     ·    │
+└───────────────────────────┘</pre>
+      <div class="card-body">
+        <header><h3>Greenity</h3><span class="badge"><span lang="es">Desarrollador principal · equipo de 3</span><span lang="en">Lead developer · team of 3</span></span></header>
+        <p lang="es">Aplicación web de reciclaje para Barranquilla: API REST con Flask (MVC), web scraping de puntos de reciclaje y un mapa con filtros de cercanía.</p>
+        <p lang="en">Recycling web app for Barranquilla: Flask REST API (MVC), web scraping of recycling points and a map with proximity filters.</p>
+        <ul class="chips"><li>Python</li><li>Flask</li><li>SQLAlchemy</li><li>MySQL</li><li>Leaflet</li><li>Docker</li></ul>
+        <p class="links"><a href="https://github.com/LeoBarraza0/Greenity" target="_blank" rel="noopener"><span lang="es">Código</span><span lang="en">Code</span> ↗</a></p>
+      </div>
+    </article>
+
+    <article class="card">
+<pre class="preview" aria-hidden="true"><span class="c">$</span> <span lang="es">buscar</span><span lang="en">search</span> <span class="s">"gusano cogollero"</span>
+<span class="g">→</span> <span lang="es">plaga del maíz</span><span lang="en">corn pest</span>
+  <span class="d"><span lang="es">control biológico · químico · alertas</span><span lang="en">biological · chemical control · alerts</span></span></pre>
+      <div class="card-body">
+        <header><h3>AgroCosta</h3><span class="badge live-b"><span lang="es">En línea</span><span lang="en">Live</span></span></header>
+        <p lang="es">Plataforma para pequeños agricultores del Caribe colombiano. Su búsqueda entiende términos locales y la interfaz está pensada para personas con poca experiencia digital.</p>
+        <p lang="en">Platform for small farmers in the Colombian Caribbean. Its search understands local terms and the interface is designed for people with little digital experience.</p>
+        <ul class="chips"><li>Next.js</li><li>React</li><li>TypeScript</li><li>Tailwind</li><li>Firebase Hosting</li></ul>
+        <p class="links"><a href="https://agrocosta-fb0b6.web.app/" target="_blank" rel="noopener"><span lang="es">Ver en línea</span><span lang="en">Live demo</span> ↗</a><a href="https://github.com/LeoBarraza0/AgroCosta" target="_blank" rel="noopener"><span lang="es">Código</span><span lang="en">Code</span> ↗</a></p>
+      </div>
+    </article>
+
+    <article class="card">
+<pre class="preview" aria-hidden="true"><span class="d"><span lang="es">humedad relativa · Barranquilla</span><span lang="en">relative humidity · Barranquilla</span></span>
+<svg class="spark" viewBox="0 -2 280 44" preserveAspectRatio="none"><polyline class="obs" points="0.0,11.6 12.2,9.7 24.3,7.8 36.5,6.8 48.7,8.7 60.9,13.4 73.0,21.0 85.2,28.6 97.4,33.3 109.6,35.2 121.7,34.2 133.9,30.4 146.1,23.8 158.3,17.2 170.4,12.5 182.6,9.7"/><polyline class="fc" points="182.6,9.7 194.8,7.8 207.0,6.8 219.1,9.7 231.3,15.3 243.5,22.9 255.7,29.5 267.8,33.3 280.0,34.2"/><circle cx="182.6" cy="9.7" r="3"/></svg><span lang="es">sensores</span><span lang="en">sensors</span> → RNN → <span class="g"><span lang="es">predicción</span><span lang="en">forecast</span></span></pre>
+      <div class="card-body">
+        <header><h3>Rennor</h3><span class="badge">Machine learning</span></header>
+        <p lang="es">Predicción de humedad relativa en Barranquilla con redes neuronales recurrentes entrenadas con datos de sensores de la ciudad.</p>
+        <p lang="en">Relative-humidity forecasting for Barranquilla with recurrent neural networks trained on data from sensors across the city.</p>
+        <ul class="chips"><li>Python</li><li>TensorFlow</li><li>pandas</li><li>Flask</li><li>Next.js</li></ul>
+        <p class="links"><a href="https://github.com/LeoBarraza0/Rennor" target="_blank" rel="noopener"><span lang="es">Código</span><span lang="en">Code</span> ↗</a></p>
+      </div>
+    </article>
+
+    <article class="card">
+<pre class="preview" aria-hidden="true"> <span class="g">(A)</span>─────(B)
+  │ <span class="g">\</span>     │
+  │   <span class="g">\</span>   │
+ (C)──<span class="g">(D)</span>─┘
+       <span class="g">│</span>
+      <span class="g">(E)</span>    <span class="d">A → D → E</span></pre>
+      <div class="card-body">
+        <header><h3>GraphMind</h3><span class="badge"><span lang="es">Algoritmos · IA</span><span lang="en">Algorithms · AI</span></span></header>
+        <p lang="es">Herramienta web para construir, analizar y visualizar grafos, con algoritmos de recorrido y camino más corto, y asistencia de IA con Gemini.</p>
+        <p lang="en">Web tool to build, analyze and visualize graphs, with traversal and shortest-path algorithms and AI assistance through Gemini.</p>
+        <ul class="chips"><li>Python</li><li>Streamlit</li><li>Gemini API</li></ul>
+        <p class="links"><a href="https://github.com/LeoBarraza0/GraphMind" target="_blank" rel="noopener"><span lang="es">Código</span><span lang="en">Code</span> ↗</a></p>
+      </div>
+    </article>
+
+    <article class="card">
+<pre class="preview" aria-hidden="true"><span class="c">POST</span> /login          <span class="g">→ <span lang="es">sesión</span><span lang="en">session</span> ✓</span>
+<span lang="es">pedido</span><span lang="en">order</span> #0042   pizza ×2
+<span lang="es">estado</span><span lang="en">status</span>: <span class="s"><span lang="es">en preparación</span><span lang="en">in progress</span></span></pre>
+      <div class="card-body">
+        <header><h3>RusticOrder</h3><span class="badge">Java</span></header>
+        <p lang="es">Gestión de pedidos para un restaurante, con una versión web que implementa la autenticación de usuarios con Servlets.</p>
+        <p lang="en">Order management for a restaurant, with a web version that implements user authentication with Servlets.</p>
+        <ul class="chips"><li>Java</li><li>Servlets</li><li>Apache Tomcat</li></ul>
+        <p class="links"><a href="https://github.com/LeoBarraza0/RusticOrder" target="_blank" rel="noopener"><span lang="es">Código</span><span lang="en">Code</span> ↗</a><a href="https://github.com/LeoBarraza0/RusticOrder-Web" target="_blank" rel="noopener"><span lang="es">Versión web</span><span lang="en">Web version</span> ↗</a></p>
+      </div>
+    </article>
+
+    <a class="card more" href="https://github.com/LeoBarraza0" target="_blank" rel="noopener">
+      <span class="cmd"><span class="ps">$</span> ls ~/github | wc -l</span>
+      <span class="big" id="repo-count">30+</span>
+      <span><span lang="es">repositorios públicos en GitHub</span><span lang="en">public repositories on GitHub</span> ↗</span>
+    </a>
+  </div>
+</section>
+
+<!-- STACK + INVESTIGACIÓN -->
+<section class="section wrap reveal split" id="stack">
+  <div>
+    <header class="sec-head">
+      <p class="cmd"><span class="ps">$</span> cat stack.json</p>
+      <h2>Stack</h2>
+    </header>
+<pre class="code json" lang="es"><span class="jl">{</span><span class="jl">  <span class="k">"lenguajes"</span>: [<span class="s">"Python"</span>, <span class="s">"JavaScript"</span>, <span class="s">"TypeScript"</span>, <span class="s">"Java"</span>, <span class="s">"Dart"</span>, <span class="s">"SQL"</span>],</span><span class="jl">  <span class="k">"web"</span>: [<span class="s">"Flask"</span>, <span class="s">"SQLAlchemy"</span>, <span class="s">"React"</span>, <span class="s">"Next.js"</span>, <span class="s">"Node.js"</span>, <span class="s">"Apps Script"</span>, <span class="s">"API REST"</span>],</span><span class="jl">  <span class="k">"movil"</span>: [<span class="s">"Flutter"</span>, <span class="s">"Provider"</span>, <span class="s">"Supabase"</span>],</span><span class="jl">  <span class="k">"datos_ia"</span>: [<span class="s">"MySQL"</span>, <span class="s">"PostgreSQL"</span>, <span class="s">"MongoDB"</span>, <span class="s">"pandas"</span>, <span class="s">"scikit-learn"</span>, <span class="s">"TensorFlow"</span>, <span class="s">"Power BI"</span>],</span><span class="jl">  <span class="k">"nube"</span>: [<span class="s">"Cloud Run"</span>, <span class="s">"Vertex AI"</span>, <span class="s">"Firebase Hosting"</span>, <span class="s">"Docker"</span>],</span><span class="jl">  <span class="k">"herramientas"</span>: [<span class="s">"Git"</span>, <span class="s">"Postman"</span>, <span class="s">"Tesseract OCR"</span>, <span class="s">"Claude Code"</span>],</span><span class="jl">  <span class="k">"redes"</span>: [<span class="s">"LAN/WAN"</span>, <span class="s">"VLANs"</span>, <span class="s">"Packet Tracer"</span>],</span><span class="jl">  <span class="k">"forma_de_trabajo"</span>: [<span class="s">"Scrum"</span>, <span class="s">"remoto"</span>, <span class="s">"usuarios no técnicos"</span>, <span class="s">"documentación"</span>],</span><span class="jl">  <span class="k">"idiomas"</span>: { <span class="k">"español"</span>: <span class="s">"nativo"</span>, <span class="k">"inglés"</span>: <span class="s">"B2"</span> }</span><span class="jl">}</span></pre>
+<pre class="code json" lang="en"><span class="jl">{</span><span class="jl">  <span class="k">"languages"</span>: [<span class="s">"Python"</span>, <span class="s">"JavaScript"</span>, <span class="s">"TypeScript"</span>, <span class="s">"Java"</span>, <span class="s">"Dart"</span>, <span class="s">"SQL"</span>],</span><span class="jl">  <span class="k">"web"</span>: [<span class="s">"Flask"</span>, <span class="s">"SQLAlchemy"</span>, <span class="s">"React"</span>, <span class="s">"Next.js"</span>, <span class="s">"Node.js"</span>, <span class="s">"Apps Script"</span>, <span class="s">"REST APIs"</span>],</span><span class="jl">  <span class="k">"mobile"</span>: [<span class="s">"Flutter"</span>, <span class="s">"Provider"</span>, <span class="s">"Supabase"</span>],</span><span class="jl">  <span class="k">"data_ai"</span>: [<span class="s">"MySQL"</span>, <span class="s">"PostgreSQL"</span>, <span class="s">"MongoDB"</span>, <span class="s">"pandas"</span>, <span class="s">"scikit-learn"</span>, <span class="s">"TensorFlow"</span>, <span class="s">"Power BI"</span>],</span><span class="jl">  <span class="k">"cloud"</span>: [<span class="s">"Cloud Run"</span>, <span class="s">"Vertex AI"</span>, <span class="s">"Firebase Hosting"</span>, <span class="s">"Docker"</span>],</span><span class="jl">  <span class="k">"tools"</span>: [<span class="s">"Git"</span>, <span class="s">"Postman"</span>, <span class="s">"Tesseract OCR"</span>, <span class="s">"Claude Code"</span>],</span><span class="jl">  <span class="k">"networking"</span>: [<span class="s">"LAN/WAN"</span>, <span class="s">"VLANs"</span>, <span class="s">"Packet Tracer"</span>],</span><span class="jl">  <span class="k">"ways_of_working"</span>: [<span class="s">"Scrum"</span>, <span class="s">"remote"</span>, <span class="s">"non-technical users"</span>, <span class="s">"documentation"</span>],</span><span class="jl">  <span class="k">"spoken"</span>: { <span class="k">"spanish"</span>: <span class="s">"native"</span>, <span class="k">"english"</span>: <span class="s">"B2"</span> }</span><span class="jl">}</span></pre>
+  </div>
+
+  <div id="investigacion">
+    <header class="sec-head">
+      <p class="cmd"><span class="ps">$</span> cat <span lang="es">publicaciones.bib</span><span lang="en">publications.bib</span></p>
+      <h2><span lang="es">Investigación</span><span lang="en">Research</span></h2>
+    </header>
+<pre class="code"><span class="c">@inproceedings</span>{barraza2025,
+  <span class="k">title</span>     = {<span class="s">Technology-Driven Strategies for
+               Emotional Well-Being in Higher
+               Education: A Systematic
+               Literature Review</span>},
+  <span class="k">booktitle</span> = {<span class="s">IEEE Colombian Caribbean
+               Conference (C3)</span>},
+  <span class="k">year</span>      = {<span class="s">2025</span>},
+  <span class="k">doi</span>       = {<a href="https://doi.org/10.1109/C366505.2025.11340093" target="_blank" rel="noopener">10.1109/C366505.2025.11340093</a>},
+  <span class="k">note</span>      = {<span class="s"><span lang="es">Ponente</span><span lang="en">Speaker</span></span>}
+}</pre>
+    <ul class="list">
+      <li><span lang="es">Ponente en los encuentros RedColsi de 2025 y 2026</span><span lang="en">Speaker at the RedColsi research meetings, 2025 and 2026</span></li>
+      <li>Hackathon Barranqu-IA 2025 (Google Developer Groups)</li>
+      <li>Hackathon Unilibre 2025</li>
+    </ul>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="section wrap reveal" id="contacto">
+  <header class="sec-head">
+    <p class="cmd"><span class="ps">$</span> ./<span lang="es">contacto</span><span lang="en">contact</span>.sh</p>
+    <h2><span lang="es">¿Hablamos?</span><span lang="en">Let's talk</span></h2>
+  </header>
+  <p class="lead narrow" lang="es">Busco un rol remoto de desarrollo. Tengo disponibilidad inmediata y respondo rápido por correo o WhatsApp.</p>
+  <p class="lead narrow" lang="en">I'm looking for a remote development role. I'm available right away and reply quickly by email or WhatsApp.</p>
+  <dl class="contact">
+    <div><dt><span lang="es">correo</span><span lang="en">email</span></dt>
+      <dd><a href="mailto:leonardo.barraza.cantillo@gmail.com">leonardo.barraza.cantillo@gmail.com</a>
+        <button class="copy" type="button" data-copy="leonardo.barraza.cantillo@gmail.com"><span lang="es">copiar</span><span lang="en">copy</span></button></dd></div>
+    <div><dt>whatsapp</dt><dd><a href="https://wa.me/573012804688" target="_blank" rel="noopener">+57 301 280 4688</a></dd></div>
+    <div><dt>linkedin</dt><dd><a href="https://www.linkedin.com/in/leonardo-alfonso-barraza-cantillo" target="_blank" rel="noopener">in/leonardo-alfonso-barraza-cantillo</a></dd></div>
+    <div><dt>github</dt><dd><a href="https://github.com/LeoBarraza0" target="_blank" rel="noopener">LeoBarraza0</a></dd></div>
+    <div><dt>cv</dt><dd><a href="cv/Leonardo-Barraza-HV.pdf" download>HV (ES)</a> · <a href="cv/Leonardo-Barraza-Resume.pdf" download>Resume (EN)</a></dd></div>
+  </dl>
+</section>
+</main>
+
+<footer class="wrap"><div class="foot">
+  <p><span lang="es">Hecho a mano con HTML, CSS y JavaScript, sin frameworks.</span><span lang="en">Hand-made with HTML, CSS and JavaScript, no frameworks.</span>
+    <a href="https://github.com/LeoBarraza0/LeoBarraza0.github.io" target="_blank" rel="noopener"><span lang="es">Ver el código</span><span lang="en">View source</span> ↗</a></p>
+  <p class="dim">© 2026 Leonardo Barraza Cantillo</p>
+</div></footer>
+</body>
+</html>
