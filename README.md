@@ -9,4 +9,4 @@ HTML, CSS y JavaScript sin frameworks ni paso de build. GitHub Pages lo sirve de
 - `main.js`: la terminal interactiva, el cambio de idioma, el git graph de la trayectoria y el último push leído de la API de GitHub.
 - `cv/`: la HV (ES) y el Resume (EN) en PDF. Son copias: reemplazarlas cuando cambie la HV.
 
-En local basta con abrir `index.html`.
+En local basta con abrir `index.html`. Para las pruebas de la terminal: `python -m http.server` y abrir `http://localhost:8000/tests/terminal.html`; todas deben decir PASS.

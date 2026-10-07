@@ -1,0 +1,60 @@
+<!doctype html><meta charset="utf-8"><title>Pruebas del portafolio</title><meta name="robots" content="noindex">
+<iframe id="f" src="../index.html?lang=es" style="width:1280px;height:900px"></iframe>
+<p>Prueba de la terminal, el idioma y el git graph. Servir la carpeta (<code>python -m http.server</code>) y abrir <code>/tests/terminal.html</code>.</p>
+<pre id="r">corriendo…</pre>
+<script>
+const wait = ms => new Promise(r => setTimeout(r, ms));
+f.onload = async () => {
+  const d = f.contentDocument, out = d.getElementById('term-out'), inp = d.getElementById('term-in');
+  const res = [];
+  const ok = (name, cond) => res.push((cond ? 'PASS ' : 'FAIL ') + name);
+  const send = c => { inp.value = c; d.getElementById('term-form').requestSubmit(); };
+  const text = () => out.innerText;
+
+  await wait(400); // la intro va a mitad
+  ok('intro en curso', d.querySelector('.typing') !== null);
+  inp.dispatchEvent(new KeyboardEvent('keydown', { key: 'h' }));
+  ok('interrumpir completa la intro', text().includes('Escribe help') && !d.querySelector('.typing'));
+  const before = text();
+  await wait(2500);
+  ok('la intro cancelada no vuelve a escribir', text() === before);
+
+  send('help');
+  ok('help', text().includes('comandos:'));
+  send('proyectos');
+  ok('proyectos con enlaces', out.querySelectorAll('a[href*="github.com/LeoBarraza0/"]').length >= 7);
+  send('echo <img src=x onerror=alert(1)>');
+  ok('echo escapa HTML', !out.querySelector('img') && text().includes('<img src=x'));
+  send('foo');
+  ok('comando desconocido', text().includes('comando no encontrado: foo'));
+  out.querySelector('.run[data-cmd="help"]').click();
+  ok('clic en comando lo ejecuta', (text().match(/comandos:/g) || []).length === 2);
+  send('clear');
+  ok('clear', out.children.length === 0);
+  send('lang en');
+  ok('lang en cambia idioma', d.documentElement.lang === 'en' && d.documentElement.dataset.lang === 'en' && text().includes('Language: English.'));
+  ok('URL ?lang actualizada', f.contentWindow.location.search === '?lang=en');
+  ok('título en inglés', d.title.includes('Full Stack Developer'));
+  ok('textos ES ocultos', getComputedStyle(d.querySelector('.lead[lang="es"]')).display === 'none' && getComputedStyle(d.querySelector('.lead[lang="en"]')).display !== 'none');
+  send('now');
+  ok('now en inglés', text().includes('in production'));
+  d.querySelector('.lang-toggle').click();
+  ok('botón vuelve a ES', d.documentElement.lang === 'es' && text().includes('Escribe help'));
+  // historial
+  send('whoami');
+  inp.dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowUp', bubbles: true }));
+  ok('historial con flecha arriba', inp.value === 'whoami');
+  inp.value = 'proy';
+  inp.dispatchEvent(new KeyboardEvent('keydown', { key: 'Tab', bubbles: true, cancelable: true }));
+  ok('autocompletar con Tab', inp.value === 'proyectos');
+
+  // git graph
+  const svg = d.querySelector('.graph-wrap svg');
+  ok('git graph dibujado: 16 puntos', svg.querySelectorAll('circle').length === 16);
+  ok('git graph: 3 carriles + 2 bifurcaciones', svg.querySelectorAll('path').length === 5);
+  const cy = [...svg.querySelectorAll('circle')].map(c => +c.getAttribute('cy'));
+  ok('puntos en orden vertical', cy.every((y, i) => i === 0 || y > cy[i - 1]));
+
+  r.textContent = res.join('\n');
+};
+</script>
