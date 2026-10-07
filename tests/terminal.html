@@ -11,7 +11,8 @@ f.onload = async () => {
   const send = c => { inp.value = c; d.getElementById('term-form').requestSubmit(); };
   const text = () => out.innerText;
 
-  await wait(400); // la intro va a mitad
+  // esperar a que la intro empiece a escribirse (depende de la carga), hasta 5 s
+  for (let i = 0; i < 50 && !d.querySelector('.typing'); i++) await wait(100);
   ok('intro en curso', d.querySelector('.typing') !== null);
   inp.dispatchEvent(new KeyboardEvent('keydown', { key: 'h' }));
   ok('interrumpir completa la intro', text().includes('Escribe help') && !d.querySelector('.typing'));
