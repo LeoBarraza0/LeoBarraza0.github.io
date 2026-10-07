@@ -153,7 +153,7 @@ function line(html, cls) {
   tbody.scrollTop = tbody.scrollHeight;
   return d;
 }
-const PS = '<span class="ps">leo@barranquilla:~$</span> ';
+const PS = '<span class="ps">leobarraza0:~$</span> ';
 const print = lines => lines.forEach(l => line(l));
 
 const hist = [];

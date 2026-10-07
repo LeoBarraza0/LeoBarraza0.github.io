@@ -287,6 +287,33 @@ h3, h4 { margin: 0; line-height: 1.3; }
 .spark .obs { stroke: var(--muted); }
 .spark .fc { stroke: var(--accent); stroke-dasharray: 5 4; }
 .spark circle { fill: var(--accent); }
+/* Vistas previas animadas: bucles lentos y de bajo contraste; prefers-reduced-motion las apaga */
+.seq { animation: seq 8s ease infinite backwards; animation-delay: calc(var(--d, 0) * 1.1s); }
+@keyframes seq { 0% { opacity: .12; } 6%, 82% { opacity: 1; } 92%, 100% { opacity: .12; } }
+.row { border-radius: 3px; animation: row 6s ease-in-out infinite; animation-delay: calc(var(--d) * .9s); }
+@keyframes row { 0%, 14%, 100% { background: transparent; } 5% { background: rgba(46, 230, 197, .12); color: var(--text); } }
+.pin { animation: pin 3s ease-in-out infinite; animation-delay: calc(var(--d) * .7s); }
+@keyframes pin { 0%, 100% { opacity: .45; text-shadow: none; } 50% { opacity: 1; text-shadow: 0 0 10px var(--accent); } }
+.you { animation: pin-you 2s ease-in-out infinite; }
+@keyframes pin-you { 50% { opacity: .35; } }
+.type { display: inline-block; overflow: hidden; white-space: nowrap; vertical-align: bottom; animation: type 8s steps(18, end) infinite; }
+@keyframes type { 0% { width: 0; } 28%, 100% { width: 18ch; } }
+.res { animation: res 8s ease infinite; }
+.res2 { animation-delay: .3s; }
+@keyframes res { 0%, 30% { opacity: 0; } 36%, 92% { opacity: 1; } 100% { opacity: 0; } }
+.spark .fc { animation: march 1s linear infinite; }
+@keyframes march { to { stroke-dashoffset: -9; } }
+.spark circle { transform-box: fill-box; transform-origin: center; animation: dot 2s ease-in-out infinite; }
+@keyframes dot { 50% { transform: scale(1.7); opacity: .55; } }
+.hop { animation: hop 6s ease infinite backwards; animation-delay: calc(var(--d) * .3s); }
+@keyframes hop { 0% { color: var(--dim); text-shadow: none; } 8%, 70% { color: var(--accent); text-shadow: 0 0 8px rgba(46, 230, 197, .6); } 85%, 100% { color: var(--dim); text-shadow: none; } }
+.swap { display: inline-grid; }
+.swap > span { grid-area: 1 / 1; }
+.st1 { animation: st1 8s ease infinite; }
+.st2 { opacity: 0; animation: st2 8s ease infinite; }
+@keyframes st1 { 0%, 55% { opacity: 1; } 60%, 95% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes st2 { 0%, 55% { opacity: 0; } 60%, 95% { opacity: 1; } 100% { opacity: 0; } }
+
 .card-body { display: flex; flex-direction: column; gap: 14px; flex: 1; padding: 20px 22px 22px; }
 .card-body header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 12px; }
 .card h3 { font-size: 1.2rem; }
